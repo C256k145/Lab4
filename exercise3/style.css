@@ -1,0 +1,21 @@
+h2 {
+  background-color: red;
+  text-align: center;
+}
+body {
+  background-color: darkgrey;
+}
+td {
+  border: 2px solid black;
+  padding: 10px;
+}
+#mainDiv {
+  display: flex;
+}
+#shippingForm {
+  margin:3%;
+}
+#shoppingCart {
+  align-items: right;
+  margin: 3%;
+}

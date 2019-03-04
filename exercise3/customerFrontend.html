@@ -1,0 +1,60 @@
+<!Doctype html>
+<html language="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="formChecker.js"></script>
+  <title>GradeShopper</title>
+</head>
+
+<body>
+  <h2>Study no longer! Buy the grade you need here at terrible prices!</h2>
+  <div id="mainDiv">
+    <form id="shippingForm" action="customerBackend.php" method="post" onsubmit="return checker()"><br><br>
+      <table id="shopInterface">
+        <tr><th>Available Grades</th></tr>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>$2000</td>
+          <td><input type="number" id="numA" method="post" name="numA" value="0"></input></td>
+          <td><input type="button" value = "Add" onclick="addA()" method="post"></input>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>$1000</td>
+          <td><input type="number" id="numB" method="post" name="numB" value="0"></input></td>
+          <td><input type="button" value = "Add" onclick="addB()" method="post"></input>
+        </tr>
+        <tr>
+          <td>C</td>
+          <td>$500</td>
+          <td><input type="number" id="numC" method="post" name="numC" value="0"></input></td>
+          <td><input type="button" value = "Add" onclick="addC()" method="post"></input>
+        </tr>
+      </table>
+        E-mail:
+        <input type="email" name = "email" id="email"></input>
+        Password:
+        <input type="password" name = "password" id="password"></input><br><br>
+        Pick a shipping option:<br>
+        <input type="radio" name="shippingType" value="free7Day">Free 7 Day Shipping</input><br>
+        <input type="radio" name="shippingType" value="3Day">$5 Three Day Shipping</input><br>
+        <input type="radio" name="shippingType" value="overnight">$50 Overnight Shipping</input><br>
+        </div>
+        <div class="container" id="shoppingCart">
+          <h4>Shopping Cart</h4>
+          <p id="numItems">Items: 0</p>
+          <p id="totalCost">Total: $0</p>
+        </div>
+        <input type="button" value="Reset" onclick="renew()"></input>
+        <input type="submit" value="Submit"></input>
+    </form>
+</body>
+</html>
